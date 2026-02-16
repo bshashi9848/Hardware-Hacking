@@ -1,0 +1,52 @@
+flashrom
+Utility for flash chip reading/writing
+
+Hardware Hacking
+Description
+flashrom is a utility for identifying, reading, writing, verifying and erasing flash chips. Used for firmware extraction and modification.
+
+Installation / Check
+Check if installed:
+
+which flashrom
+Install command:
+
+sudo apt install flashrom
+Basic Syntax
+flashrom [options]
+Common Commands
+Command	What it does	When to use	Risk
+flashrom -p internal
+
+Detect internal chip	Check BIOS chip	
+flashrom -p internal -r backup.bin
+
+Read firmware	Backup BIOS	
+flashrom -p internal -w firmware.bin
+
+Write firmware	Flash new BIOS	
+flashrom -p ch341a_spi
+
+Use CH341A programmer	External flash read	
+Step-by-Step Guide
+1
+Identify flash chip
+2
+Backup original firmware
+3
+Modify or prepare new firmware
+4
+Write to chip
+5
+Verify write
+Understanding the Output
+Shows chip detection, read/write progress, and verification status.
+
+Important Warnings
+•
+Can brick devices if done wrong
+•
+Backup before writing
+•
+Only modify authorized hardware
+⚠️ Use Kali Linux tools only on systems you own or have written permission to test. Unauthorized hacking is illegal and can result in criminal charges.
