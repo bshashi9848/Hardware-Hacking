@@ -1,0 +1,51 @@
+Arduino
+Platform for hardware projects
+
+Hardware Hacking
+Description
+Arduino IDE and tools for programming microcontrollers used in hardware hacking, BadUSB attacks, and IoT testing.
+
+Installation / Check
+Check if installed:
+
+which arduino
+Install command:
+
+sudo apt install arduino
+Basic Syntax
+arduino
+Common Commands
+Command	What it does	When to use	Risk
+arduino
+
+Launch Arduino IDE	Program devices	
+arduino-cli compile --fqbn arduino:avr:uno sketch
+
+Compile sketch	Build firmware	
+arduino-cli upload -p /dev/ttyUSB0 --fqbn arduino:avr:uno sketch
+
+Upload to board	Flash firmware	
+Step-by-Step Guide
+1
+Install Arduino IDE
+2
+Connect Arduino board
+3
+Write or load sketch
+4
+Select board and port
+5
+Compile and upload
+6
+Test functionality
+Understanding the Output
+IDE shows compilation status and upload progress.
+
+Important Warnings
+•
+BadUSB can be malicious
+•
+Respect device ownership
+•
+Use for authorized testing
+⚠️ Use Kali Linux tools only on systems you own or have written permission to test. Unauthorized hacking is illegal and can result in criminal charges.
