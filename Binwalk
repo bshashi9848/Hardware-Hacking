@@ -1,0 +1,54 @@
+Binwalk
+Firmware analysis and extraction tool
+
+Forensics
+Description
+Binwalk is a tool for analyzing, reverse engineering, and extracting firmware images. It can identify embedded files, executable code, and file systems within binary files.
+
+Installation / Check
+Check if installed:
+
+which binwalk
+Install command:
+
+sudo apt install binwalk
+Basic Syntax
+binwalk [options] <firmware>
+Common Commands
+Command	What it does	When to use	Risk
+binwalk firmware.bin
+
+Scan for signatures	Identify embedded files/systems	
+binwalk -e firmware.bin
+
+Extract files	Extract embedded content	
+binwalk -Me firmware.bin
+
+Recursive extraction	Deep extraction of nested files	
+binwalk -E firmware.bin
+
+Entropy analysis	Detect encryption/compression	
+Step-by-Step Guide
+1
+Obtain firmware image
+2
+Scan with binwalk for overview
+3
+Extract with -e flag
+4
+Explore extracted file system
+5
+Look for configs, keys, hardcoded creds
+6
+Analyze binaries further
+Understanding the Output
+Shows file offset, description, and size of embedded content. Extraction creates _extracted folder.
+
+Important Warnings
+•
+Extraction may fail on encrypted firmware
+•
+Some extractions require additional tools
+•
+Respect intellectual property laws
+⚠️ Use Kali Linux tools only on systems you own or have written permission to test. Unauthorized hacking is illegal and can result in criminal charges.
